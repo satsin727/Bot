@@ -91,7 +91,7 @@ def is_user_admin(user_id, chat_id):
     try:
         return bot.get_chat_member(chat_id, user_id).status in ['administrator', 'creator']
     except:
-        return False
+        return True
 
 @bot.message_handler(commands=['approve', 'disapprove'])
 def approve_or_disapprove_user(message):
